@@ -11,4 +11,6 @@
     <string name="overview">Overview</string>
     <string name="splashscreen">Splashscreen</string>
     <string name="created_by">Created By : Miftahul Ulum</string>
+    <string name="button_favorite">Button Favorite</string>
+    <string name="share">SHARE</string>
 </resources>

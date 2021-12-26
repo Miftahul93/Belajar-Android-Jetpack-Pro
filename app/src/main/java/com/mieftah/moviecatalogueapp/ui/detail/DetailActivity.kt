@@ -3,6 +3,7 @@ package com.mieftah.moviecatalogueapp.ui.detail
 import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.palette.graphics.Palette
 import com.bumptech.glide.Glide
@@ -68,6 +69,14 @@ class DetailActivity : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener
             .into(binding.ivPoster)
 
         binding.ivPoster.tag = data.poster
+
+        binding.fabFavorite.setOnClickListener {
+            Toast.makeText(this, "Favorite", Toast.LENGTH_SHORT).show()
+        }
+
+        binding.btShare.setOnClickListener {
+            Toast.makeText(this, "Share", Toast.LENGTH_SHORT).show()
+        }
 
         setColorByPalette(data.poster)
 

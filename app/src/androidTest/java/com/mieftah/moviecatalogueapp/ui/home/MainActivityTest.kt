@@ -30,6 +30,8 @@ class MainActivityTest {
     @Test
     fun loadDetailMovies() {
         onView(withId(R.id.rv_movie)).perform(RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(0, click()))
+        onView(withId(R.id.fab_favorite)).perform(click())
+        onView(withId(R.id.bt_share)).perform(click())
         onView(withId(R.id.collapsing)).check(matches(isDisplayed()))
         onView(withId(R.id.collapsing)).check(matches(withContentDescription(dummyMovies[0].title)))
         onView(withId(R.id.iv_poster)).check(matches(isDisplayed()))
@@ -59,6 +61,8 @@ class MainActivityTest {
     fun loadDetailTvShow() {
         onView(withText("TV SHOW")).perform(click())
         onView(withId(R.id.rv_movie)).perform(RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(0, click()))
+        onView(withId(R.id.fab_favorite)).perform(click())
+        onView(withId(R.id.bt_share)).perform(click())
         onView(withId(R.id.collapsing)).check(matches(isDisplayed()))
         onView(withId(R.id.collapsing)).check(matches(withContentDescription(dummyTvShow[0].title)))
         onView(withId(R.id.iv_poster)).check(matches(isDisplayed()))
