@@ -8,10 +8,7 @@ class DetailViewModel : ViewModel() {
 
     private lateinit var movieShowId: String
     private lateinit var tvShowId: String
-
-    private fun getListMovie(): ArrayList<DataEntity> =
-        DataDummy.getMovies() as ArrayList<DataEntity>
-
+    private fun getListMovie(): ArrayList<DataEntity> = DataDummy.getMovies()
     private fun getListTvShow(): ArrayList<DataEntity> = DataDummy.getTvShow()
 
     fun setMovieId(movieId: String) {
@@ -28,7 +25,6 @@ class DetailViewModel : ViewModel() {
         for (movie in listMovie) {
             if (movie.id == movieShowId) {
                 result = movie
-                break
             }
         }
         return result
@@ -40,7 +36,6 @@ class DetailViewModel : ViewModel() {
         for (tvShow in listTv) {
             if (tvShow.id == tvShowId) {
                 result = tvShow
-                break
             }
         }
         return result
