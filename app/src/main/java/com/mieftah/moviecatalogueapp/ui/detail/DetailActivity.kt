@@ -65,9 +65,9 @@ class DetailActivity : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener
         binding.tvOverview.text = data.overview
         Glide.with(this)
             .load(data.poster)
-            .into(binding.ivBackground)
+            .into(binding.ivPoster)
 
-        binding.ivBackground.tag = data.poster
+        binding.ivPoster.tag = data.poster
 
         setColorByPalette(data.poster)
 

@@ -18,14 +18,14 @@
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:id="@+id/collapsing"
             android:layout_width="match_parent"
-            android:layout_height="390dp"
+            android:layout_height="400dp"
             android:textSize="35sp"
             app:expandedTitleMarginBottom="95dp"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:contentScrim="?colorPrimary">
 
             <ImageView
-                android:id="@+id/iv_background"
+                android:id="@+id/iv_poster"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:scaleType="fitXY"
