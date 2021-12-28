@@ -24,12 +24,42 @@ class MainActivity : AppCompatActivity() {
         val imageSlider = binding.imageSlider
         val imageList = ArrayList<SlideModel>()
 
-        imageList.add(SlideModel("https://www.themoviedb.org/t/p/original/2maUA8Y4kxJ9UtLHYDhf9FSTd7u.jpg", "Spider-Man: No Way Home"))
-        imageList.add(SlideModel("https://www.themoviedb.org/t/p/original/aLBiGL6Nqx8nY27X61g6szKn19Y.jpg", "Venom: Biarkan ada Pembantaian"))
-        imageList.add(SlideModel("https://www.themoviedb.org/t/p/original/65MHN2VZ9kwQ0X9pi3QvbJjZGR1.jpg", "Shang-Chi dan Legenda Sepuluh Cincin "))
-        imageList.add(SlideModel("https://www.themoviedb.org/t/p/original/h25kBoE6YGMIF09R9FFDFPcvQoH.jpg", "Hawkeye"))
-        imageList.add(SlideModel("https://www.themoviedb.org/t/p/original/iF8ai2QLNiHV4anwY1TuSGZXqfN.jpg", "Chucky"))
-        imageList.add(SlideModel("https://www.themoviedb.org/t/p/original/mpgDeLhl8HbhI03XLB7iKO6M6JE.jpg", "The Wheel of Time"))
+        imageList.add(
+            SlideModel(
+                "https://www.themoviedb.org/t/p/original/2maUA8Y4kxJ9UtLHYDhf9FSTd7u.jpg",
+                "Spider-Man: No Way Home"
+            )
+        )
+        imageList.add(
+            SlideModel(
+                "https://www.themoviedb.org/t/p/original/aLBiGL6Nqx8nY27X61g6szKn19Y.jpg",
+                "Venom: Biarkan ada Pembantaian"
+            )
+        )
+        imageList.add(
+            SlideModel(
+                "https://www.themoviedb.org/t/p/original/65MHN2VZ9kwQ0X9pi3QvbJjZGR1.jpg",
+                "Shang-Chi dan Legenda Sepuluh Cincin "
+            )
+        )
+        imageList.add(
+            SlideModel(
+                "https://www.themoviedb.org/t/p/original/h25kBoE6YGMIF09R9FFDFPcvQoH.jpg",
+                "Hawkeye"
+            )
+        )
+        imageList.add(
+            SlideModel(
+                "https://www.themoviedb.org/t/p/original/iF8ai2QLNiHV4anwY1TuSGZXqfN.jpg",
+                "Chucky"
+            )
+        )
+        imageList.add(
+            SlideModel(
+                "https://www.themoviedb.org/t/p/original/mpgDeLhl8HbhI03XLB7iKO6M6JE.jpg",
+                "The Wheel of Time"
+            )
+        )
 
         imageSlider.setImageList(imageList, ScaleTypes.FIT)
 
@@ -38,10 +68,11 @@ class MainActivity : AppCompatActivity() {
         viewPager.adapter = pagerAdapter
         val tabs: TabLayout = binding.tabslayout
 
-        TabLayoutMediator(tabs, viewPager) {tab, position ->
+        TabLayoutMediator(tabs, viewPager) { tab, position ->
             tab.text = resources.getString(TAB_TITLES[position])
         }.attach()
     }
+
     companion object {
         @StringRes
         private val TAB_TITLES = intArrayOf(

@@ -3,6 +3,7 @@ package com.mieftah.moviecatalogueapp.ui.home
 import androidx.recyclerview.widget.RecyclerView
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.click
+import androidx.test.espresso.action.ViewActions.swipeUp
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.contrib.RecyclerViewActions
 import androidx.test.espresso.matcher.ViewMatchers.*
@@ -10,7 +11,6 @@ import androidx.test.ext.junit.rules.ActivityScenarioRule
 import com.mieftah.moviecatalogueapp.R
 import com.mieftah.moviecatalogueapp.utils.DataDummy
 import org.hamcrest.CoreMatchers.equalTo
-import org.junit.Assert.*
 import org.junit.Rule
 import org.junit.Test
 
@@ -30,6 +30,7 @@ class MainActivityTest {
     @Test
     fun loadDetailMovies() {
         onView(withId(R.id.rv_movie)).perform(RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(0, click()))
+        onView(withId(R.id.coordinator_layout)).perform(swipeUp())
         onView(withId(R.id.fab_favorite)).perform(click())
         onView(withId(R.id.bt_share)).perform(click())
         onView(withId(R.id.collapsing)).check(matches(isDisplayed()))
@@ -61,6 +62,7 @@ class MainActivityTest {
     fun loadDetailTvShow() {
         onView(withText("TV SHOW")).perform(click())
         onView(withId(R.id.rv_movie)).perform(RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(0, click()))
+        onView(withId(R.id.coordinator_layout)).perform(swipeUp())
         onView(withId(R.id.fab_favorite)).perform(click())
         onView(withId(R.id.bt_share)).perform(click())
         onView(withId(R.id.collapsing)).check(matches(isDisplayed()))

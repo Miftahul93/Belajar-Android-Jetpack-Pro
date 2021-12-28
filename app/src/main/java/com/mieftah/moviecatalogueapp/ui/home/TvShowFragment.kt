@@ -13,7 +13,7 @@ import com.mieftah.moviecatalogueapp.databinding.FragmentMoviesBinding
 import com.mieftah.moviecatalogueapp.ui.detail.DetailActivity
 import com.mieftah.moviecatalogueapp.utils.Helper.TYPE_TV_SHOW
 
-class TvShowFragment: Fragment(R.layout.fragment_movies), DataAdapter.DataCallback {
+class TvShowFragment : Fragment(R.layout.fragment_movies), DataAdapter.DataCallback {
 
     private var _binding: FragmentMoviesBinding? = null
     private val binding get() = _binding as FragmentMoviesBinding
@@ -25,7 +25,10 @@ class TvShowFragment: Fragment(R.layout.fragment_movies), DataAdapter.DataCallba
         _binding = FragmentMoviesBinding.bind(view)
 
         activity?.let {
-            viewmodel = ViewModelProvider(it, ViewModelProvider.NewInstanceFactory())[DataMovieViewModel::class.java]
+            viewmodel = ViewModelProvider(
+                it,
+                ViewModelProvider.NewInstanceFactory()
+            )[DataMovieViewModel::class.java]
         }
 
         val listTvShow = viewmodel.getTvShow()

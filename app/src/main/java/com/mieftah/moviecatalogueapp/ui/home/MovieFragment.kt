@@ -25,24 +25,13 @@ class MovieFragment : Fragment(R.layout.fragment_movies), DataAdapter.DataCallba
         _bindding = FragmentMoviesBinding.bind(view)
 
         activity?.let {
-            viewModelData = ViewModelProvider(it, ViewModelProvider.NewInstanceFactory())[DataMovieViewModel::class.java]
+            viewModelData = ViewModelProvider(
+                it,
+                ViewModelProvider.NewInstanceFactory()
+            )[DataMovieViewModel::class.java]
         }
         val listMovie = viewModelData.getMovie()
         setListMovie(listMovie)
-
-        /*if (activity != null) {
-            val viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())[MovieViewModel::class.java]
-            val movies = viewModel.getMovie()
-
-            val movieAdapter = DataAdapter()
-            movieAdapter.setMovies(movies)
-
-            with(binding.rvMovie) {
-                layoutManager = LinearLayoutManager(context)
-                setHasFixedSize(true)
-                adapter = movieAdapter
-            }
-        }*/
     }
 
     private fun setListMovie(data: List<DataEntity>) {
@@ -52,7 +41,7 @@ class MovieFragment : Fragment(R.layout.fragment_movies), DataAdapter.DataCallba
                 adapter = DataAdapter(this@MovieFragment)
             }.also {
                 it.adapter.let { adapter ->
-                    when(adapter) {
+                    when (adapter) {
                         is DataAdapter -> {
                             adapter.setDataMovies(data)
                         }

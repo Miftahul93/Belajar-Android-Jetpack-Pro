@@ -7,7 +7,6 @@
     <string name="genre">Genre</string>
     <string name="duration">Duration</string>
     <string name="release">Release</string>
-    <string name="score">%d %s</string>
     <string name="overview">Overview</string>
     <string name="splashscreen">Splashscreen</string>
     <string name="created_by">Created By : Miftahul Ulum</string>

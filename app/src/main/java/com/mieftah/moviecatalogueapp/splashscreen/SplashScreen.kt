@@ -1,10 +1,11 @@
-package com.mieftah.moviecatalogueapp
+package com.mieftah.moviecatalogueapp.splashscreen
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import com.mieftah.moviecatalogueapp.R
 import com.mieftah.moviecatalogueapp.ui.home.MainActivity
 import com.mieftah.moviecatalogueapp.utils.Helper
 
@@ -17,4 +18,5 @@ class SplashScreen : AppCompatActivity() {
             startActivity(Intent(this@SplashScreen, MainActivity::class.java))
             finish()
         }, Helper.TIMES.toLong())
-    }}
+    }
+}

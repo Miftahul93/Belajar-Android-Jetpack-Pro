@@ -230,7 +230,8 @@ object DataDummy {
                 R.drawable.poster_doom_patrol
             ),
 
-            DataEntity("tv6",
+            DataEntity(
+                "tv6",
                 "Super Dragon Ball Heroes",
                 "July 1, 2018",
                 "Animation, Action & Adventure, Sci-Fi & Fantasy",
@@ -288,7 +289,7 @@ object DataDummy {
                 "tv11",
                 "Supernatural",
                 "September 13, 2005",
-                 "Drama, Mystery, Sci-Fi & Fantasy",
+                "Drama, Mystery, Sci-Fi & Fantasy",
                 "45m",
                 "When they were boys, Sam and Dean Winchester lost their mother to a mysterious and demonic supernatural force. Subsequently, their father raised them to be soldiers. He taught them about the paranormal evil that lives in the dark corners and on the back roads of America ... and he taught them how to kill it. Now, the Winchester brothers crisscross the country in their '67 Chevy Impala, battling every kind of supernatural threat they encounter along the way.",
                 8.2f,
