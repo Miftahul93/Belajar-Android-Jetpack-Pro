@@ -11,8 +11,8 @@ import com.google.android.material.appbar.AppBarLayout
 import com.mieftah.moviecatalogueapp.R
 import com.mieftah.moviecatalogueapp.data.DataEntity
 import com.mieftah.moviecatalogueapp.databinding.ActivityDetailBinding
-import com.mieftah.moviecatalogueapp.utils.Helper.TYPE_MOVIE
-import com.mieftah.moviecatalogueapp.utils.Helper.TYPE_TV_SHOW
+import com.mieftah.moviecatalogueapp.utils.Constanta.TYPE_MOVIE
+import com.mieftah.moviecatalogueapp.utils.Constanta.TYPE_TV_SHOW
 import kotlin.math.abs
 
 class DetailActivity : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener {

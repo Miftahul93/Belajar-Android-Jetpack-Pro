@@ -41,6 +41,7 @@ ext {
     viewPagerVersion = '1.0.0'
     imageSliderVersion = '0.1.0'
     navigationVersion = '2.3.5'
+    retrofitVersion = '2.9.0'
 
     // Testing
     junitVersion = '4.13.2'

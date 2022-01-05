@@ -7,7 +7,7 @@ import android.os.Handler
 import android.os.Looper
 import com.mieftah.moviecatalogueapp.R
 import com.mieftah.moviecatalogueapp.ui.home.MainActivity
-import com.mieftah.moviecatalogueapp.utils.Helper
+import com.mieftah.moviecatalogueapp.utils.Constanta
 
 class SplashScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,6 +17,6 @@ class SplashScreen : AppCompatActivity() {
         Handler(Looper.getMainLooper()).postDelayed({
             startActivity(Intent(this@SplashScreen, MainActivity::class.java))
             finish()
-        }, Helper.TIMES.toLong())
+        }, Constanta.TIMES.toLong())
     }
 }
