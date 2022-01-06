@@ -11,7 +11,7 @@ import com.mieftah.moviecatalogueapp.adapter.DataAdapter
 import com.mieftah.moviecatalogueapp.data.DataEntity
 import com.mieftah.moviecatalogueapp.databinding.FragmentMoviesBinding
 import com.mieftah.moviecatalogueapp.ui.detail.DetailActivity
-import com.mieftah.moviecatalogueapp.utils.Constanta.TYPE_TV_SHOW
+import com.mieftah.moviecatalogueapp.utils.Constants.TYPE_TV_SHOW
 
 class TvShowFragment : Fragment(R.layout.fragment_movies), DataAdapter.DataCallback {
 
