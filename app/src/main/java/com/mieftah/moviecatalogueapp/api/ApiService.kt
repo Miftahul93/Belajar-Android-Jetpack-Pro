@@ -16,7 +16,7 @@ interface ApiService {
     @Headers("Autorization: token ${Constants.MOVIE_API}")
     fun getMoviePopular(
         @Query("api_key") apiKey: String
-    ) : Call<ListResponse<MovieResponse>>
+    ) : Call<ListResponse>
 
     @GET(Constants.MOVIE_DETAIL)
     @Headers("Autorization: token ${Constants.MOVIE_API}")
@@ -29,7 +29,7 @@ interface ApiService {
     @Headers("Autorization: token ${Constants.MOVIE_API}")
     fun getTvShowPopular(
         @Query("api_key") apiKey: String
-    ) : Call<ListResponse<TvShowResponse>>
+    ) : Call<ListResponse>
 
     @GET(Constants.TV_DETAIL)
     @Headers("Autorization: token ${Constants.MOVIE_API}")
