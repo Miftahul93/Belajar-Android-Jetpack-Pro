@@ -44,7 +44,7 @@ class RemoteDataSource {
         })
     }
 
-    fun getTvPopular (callback: LoadTvPopularCallback) {
+    fun getTvShowPopular (callback: LoadTvPopularCallback) {
         //idling
         val client = ApiClient.getApiService().getTvShowPopular(MOVIE_API)
         client.enqueue(object : Callback<ListResponse>{
