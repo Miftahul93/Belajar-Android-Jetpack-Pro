@@ -16,20 +16,21 @@ class RemoteDataSource {
     fun getMoviePopular(callback: LoadMoviesCallback) {
         // EspressoIdlingResource.increment()
         val client = ApiClient.getApiService().getMoviePopular(MOVIE_API)
-        client.enqueue(object : Callback<ListResponse>{
-            override fun onResponse(call: Call<ListResponse>, response: Response<ListResponse>) {
+        client.enqueue(object : Callback<ListResponse<MovieResponse>>{
+            override fun onResponse(call: Call<ListResponse<MovieResponse>>, response: Response<ListResponse<MovieResponse>>) {
                 callback.onMoviesLoaded(response.body()?.results)
                 // EspressoIdlingResource.decrement()
             }
 
-            override fun onFailure(call: Call<ListResponse>, t: Throwable) {
+            override fun onFailure(call: Call<ListResponse<MovieResponse>>, t: Throwable) {
                 Log.e(ContentValues.TAG, "onFailure :${t.message}")
                 // EspressoIdlingResource.decrement()
             }
         })
     }
 
-    fun getMovieDetail(movieId: LoadDetailMovieCallback, callback: LoadDetailMovieCallback){
+    fun getMovieDetail(movieId: Int, callback: LoadDetailMovieCallback){
+
         // idling
         val client = ApiClient.getApiService().getDetailMovie(movieId, MOVIE_API)
         client.enqueue(object : Callback<MovieResponse>{
@@ -48,13 +49,13 @@ class RemoteDataSource {
     fun getTvShowPopular (callback: LoadTvPopularCallback) {
         //idling
         val client = ApiClient.getApiService().getTvShowPopular(MOVIE_API)
-        client.enqueue(object : Callback<ListResponse>{
-            override fun onResponse(call: Call<ListResponse>, response: Response<ListResponse>) {
+        client.enqueue(object : Callback<ListResponse<TvShowResponse>>{
+            override fun onResponse(call: Call<ListResponse<TvShowResponse>>, response: Response<ListResponse<TvShowResponse>>) {
                 callback.onTvShowLoaded(response.body()?.results)
                 //Espresso
             }
 
-            override fun onFailure(call: Call<ListResponse>, t: Throwable) {
+            override fun onFailure(call: Call<ListResponse<TvShowResponse>>, t: Throwable) {
                 Log.e(ContentValues.TAG, "onFailure : ${t.message}")
             }
         })
@@ -83,7 +84,7 @@ class RemoteDataSource {
     }
 
     interface LoadTvPopularCallback {
-        fun onTvShowLoaded(tvShowPopular: List<MovieResponse>?)
+        fun onTvShowLoaded(tvShowPopular: List<TvShowResponse>?)
     }
 
     interface LoadDetailMovieCallback {

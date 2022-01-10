@@ -7,9 +7,9 @@ interface CatalogueDataSource {
 
     fun getMoviePopular() : LiveData<List<DataEntity>>
 
-    fun getMovieDetail() : LiveData<List<DataEntity>>
+    fun getMovieDetail(movieId: Int) : LiveData<List<DataEntity>>
 
     fun getTvShowPopular() : LiveData<List<DataEntity>>
 
-    fun getTvShowDetail() : LiveData<List<DataEntity>>
+    fun getTvShowDetail(tvShowId: Int) : LiveData<List<DataEntity>>
 }

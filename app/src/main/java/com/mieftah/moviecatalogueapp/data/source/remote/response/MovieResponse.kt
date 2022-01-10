@@ -20,7 +20,7 @@ data class MovieResponse(
 	val title: String,
 
 	@field:SerializedName("genre_ids")
-	val genreIds: List<String>,
+	val genres: List<String>,
 
 	@field:SerializedName("genres")
 	val genresDetail: List<GenreResponse>,
