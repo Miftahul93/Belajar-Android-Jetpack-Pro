@@ -35,7 +35,7 @@ interface ApiService {
     @GET(Constants.TV_DETAIL)
     @Headers("Autorization: token ${Constants.MOVIE_API}")
     fun getDetailTvShow (
-        @Path("tv_id") tvShow: Int,
+        @Path("tv_id") tvShowId: Int,
         @Query("api_key") apiKey: String
     ) : Call<TvShowResponse>
 }

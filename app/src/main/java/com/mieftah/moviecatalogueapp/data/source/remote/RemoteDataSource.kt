@@ -1,5 +1,6 @@
 package com.mieftah.moviecatalogueapp.data.source.remote
 
+import android.content.ContentValues
 import android.util.Log
 import com.mieftah.moviecatalogueapp.api.ApiClient
 import com.mieftah.moviecatalogueapp.data.source.remote.response.ListResponse
@@ -22,7 +23,7 @@ class RemoteDataSource {
             }
 
             override fun onFailure(call: Call<ListResponse>, t: Throwable) {
-                Log.e("Remote", "getMovie Popolar onFailur :${t.message}")
+                Log.e(ContentValues.TAG, "onFailure :${t.message}")
                 // EspressoIdlingResource.decrement()
             }
         })
@@ -38,7 +39,7 @@ class RemoteDataSource {
             }
 
             override fun onFailure(call: Call<MovieResponse>, t: Throwable) {
-                Log.e("Remote", "getMoview onFailur : ${t.message}")
+                Log.e(ContentValues.TAG, "onFailure : ${t.message}")
                 //idling
             }
         })
@@ -54,14 +55,14 @@ class RemoteDataSource {
             }
 
             override fun onFailure(call: Call<ListResponse>, t: Throwable) {
-                Log.e("Remote", "getTvShow on Failure : ${t.message}")
+                Log.e(ContentValues.TAG, "onFailure : ${t.message}")
             }
         })
     }
 
-    fun getTvShowDetail(tvShow: Int, callback: LoadDetailTvShowCallback) {
+    fun getTvShowDetail(tvShowId: Int, callback: LoadDetailTvShowCallback) {
         // Espresso
-        val client = ApiClient.getApiService().getDetailTvShow(tvShow, MOVIE_API)
+        val client = ApiClient.getApiService().getDetailTvShow(tvShowId, MOVIE_API)
         client.enqueue(object : Callback<TvShowResponse>{
             override fun onResponse(
                 call: Call<TvShowResponse>,
@@ -72,7 +73,7 @@ class RemoteDataSource {
             }
 
             override fun onFailure(call: Call<TvShowResponse>, t: Throwable) {
-                Log.e("Remote", "Detail TV Show : ${t.message}")
+                Log.e(ContentValues.TAG, "onFailure : ${t.message}")
             }
         })
     }
