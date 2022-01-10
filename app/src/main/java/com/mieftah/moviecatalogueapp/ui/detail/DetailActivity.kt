@@ -61,8 +61,8 @@ class DetailActivity : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener
         binding.tvGenre.text = data.genre
         binding.tvRelease.text = data.releaseDate
         binding.tvDuration.text = data.duration
-        binding.rating.text = data.userScore.toString()
-        binding.ratingBar.rating = data.userScore.div(2)
+        binding.rating.text = data.rating.toString()
+        binding.ratingBar.rating = data.rating.div(2)
         binding.tvOverview.text = data.overview
         Glide.with(this)
             .load(data.poster)

@@ -42,7 +42,7 @@ class DataAdapter(private val callback: DataCallback) :
                 tvGenre.text = data.genre
                 tvRelease.text = data.releaseDate
                 tvDuration.text = data.duration
-                ratingBar.rating = data.userScore.div(2)
+                ratingBar.rating = data.rating.div(2)
                 Glide.with(itemView.context)
                     .load(data.poster)
                     .transform(RoundedCorners(30))

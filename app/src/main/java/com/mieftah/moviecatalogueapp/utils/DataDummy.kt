@@ -7,168 +7,168 @@ object DataDummy {
     fun getMovies(): ArrayList<DataEntity> {
         return arrayListOf(
             DataEntity(
-                "movie1",
-                "Alita: Battle Angel",
-                "02/14/2019",
-                "Action, Science Fiction, Adventure",
-                "2h 2m",
-                "When Alita awakens with no memory of who she is in a future world she does not recognize, she is taken in by Ido, a compassionate doctor who realizes that somewhere in this abandoned cyborg shell is the heart and soul of a young woman with an extraordinary past.",
-                7.2f,
-                R.drawable.poster_alita
-            ),
-
-            DataEntity(
-                "movie2",
-                "A Star Is Born",
-                "10/05/2018",
-                "Drama, Romance, Music",
-                "2h 16m",
-                "Seasoned musician Jackson Maine discovers — and falls in love with — struggling artist Ally. She has just about given up on her dream to make it big as a singer — until Jack coaxes her into the spotlight. But even as Ally's career takes off, the personal side of their relationship is breaking down, as Jack fights an ongoing battle with his own internal demons.",
-                7.5f,
-                R.drawable.poster_a_start_is_born
-            ),
-
-            DataEntity(
-                "movie3",
-                "Aquaman",
-                "12/21/2018",
-                "Action, Adventure, Fantasy",
-                "2h 23m",
-                "Once home to the most advanced civilization on Earth, Atlantis is now an underwater kingdom ruled by the power-hungry King Orm. With a vast army at his disposal, Orm plans to conquer the remaining oceanic people and then the surface world. Standing in his way is Arthur Curry, Orm's half-human, half-Atlantean brother and true heir to the throne.",
-                6.9f,
-                R.drawable.poster_aquaman
-            ),
-
-            DataEntity(
-                "movie4",
-                "Bohemian Rhapsody",
-                "11/02/2018",
-                "Music, Drama, History",
-                "2h 15m",
-                "Singer Freddie Mercury, guitarist Brian May, drummer Roger Taylor and bass guitarist John Deacon take the music world by storm when they form the rock 'n' roll band Queen in 1970. Hit songs become instant classics. When Mercury's increasingly wild lifestyle starts to spiral out of control, Queen soon faces its greatest challenge yet – finding a way to keep the band together amid the success and excess.",
-                8.0f,
-                R.drawable.poster_bohemian
-            ),
-
-            DataEntity(
-                "movie5",
-                "Creed",
-                "11/25/2015",
-                "Drama",
-                "2h 13m",
-                "The former World Heavyweight Champion Rocky Balboa serves as a trainer and mentor to Adonis Johnson, the son of his late friend and former rival Apollo Creed.",
-                7.4f,
-                R.drawable.poster_creed
-            ),
-
-            DataEntity(
-                "movie6",
-                "Fantastic Beasts: The Crimes of Grindelwald",
-                "11/16/2018",
-                "Adventure, Fantasy, Drama",
-                "2h 14m",
-                "Gellert Grindelwald has escaped imprisonment and has begun gathering followers to his cause—elevating wizards above all non-magical beings. The only one capable of putting a stop to him is the wizard he once called his closest friend, Albus Dumbledore. However, Dumbledore will need to seek help from the wizard who had thwarted Grindelwald once before, his former student Newt Scamander, who agrees to help, unaware of the dangers that lie ahead. Lines are drawn as love and loyalty are tested, even among the truest friends and family, in an increasingly divided wizarding world.",
-                6.9f,
-                R.drawable.poster_crimes
-            ),
-
-            DataEntity(
-                "movie7",
-                "Glass",
-                "01/18/2019",
-                "Thriller, Drama, Science Fiction",
-                "2h 9m",
-                "In a series of escalating encounters, former security guard David Dunn uses his supernatural abilities to track Kevin Wendell Crumb, a disturbed man who has twenty-four personalities. Meanwhile, the shadowy presence of Elijah Price emerges as an orchestrator who holds secrets critical to both men.",
-                6.7f,
-                R.drawable.poster_glass
-            ),
-
-            DataEntity(
-                "movie8",
-                "Overlord",
-                "11/09/2018",
-                "Horror, War, Science Fiction",
-                "1h 50m",
-                "France, June 1944. On the eve of D-Day, some American paratroopers fall behind enemy lines after their aircraft crashes while on a mission to destroy a radio tower in a small village near the beaches of Normandy. After reaching their target, the surviving paratroopers realise that, in addition to fighting the Nazi troops that patrol the village, they also must fight against something else.",
-                6.7f,
-                R.drawable.poster_overlord
-            ),
-
-            DataEntity(
-                "movie9",
-                "Mortal Engines",
-                "12/14/2018",
-                "Adventure, Science Fiction",
-                "2h 9m",
-                "Many thousands of years in the future, Earth’s cities roam the globe on huge wheels, devouring each other in a struggle for ever diminishing resources. On one of these massive traction cities, the old London, Tom Natsworthy has an unexpected encounter with a mysterious young woman from the wastelands who will change the course of his life forever.",
-                6.2f,
-                R.drawable.poster_mortal_engines
-            ),
-
-            DataEntity(
-                "movie10",
-                "Robin Hood,",
-                "11/21/2018",
-                "Adventure, Action, Thriller",
-                "1h 56m",
-                "A war-hardened Crusader and his Moorish commander mount an audacious revolt against the corrupt English crown.",
-                5.9f,
-                R.drawable.poster_robin_hood
-            ),
-
-            DataEntity(
-                "movie11",
+                634649,
                 "Spider-Man: No Way Home",
-                "12/17/2021",
-                "Action, Adventure, Science Fiction",
-                "2h 28m",
+                "2021-12-15",
+                 listOf("Action, Adventure, Science Fiction"),
+                148,
                 "Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man.",
-                8.8f,
-                R.drawable.poster_spiderman
+                8.4f,
+                "/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg"
             ),
 
             DataEntity(
-                "movie12",
-                "Master Z: Ip Man Legacy",
-                "12/26/2018",
-                "Action",
-                "1h 47m",
-                "Following his defeat by Master Ip, Cheung Tin Chi tries to make a life with his young son in Hong Kong, waiting tables at a bar that caters to expats. But it's not long before the mix of foreigners, money, and triad leaders draw him once again to the fight.",
-                6.2f,
-                R.drawable.poster_master_z
+                568124,
+                "Encanto",
+                "2021-11-24",
+                 listOf("Animation, Comedy, Family, Fantasy"),
+                102,
+                "The tale of an extraordinary family, the Madrigals, who live hidden in the mountains of Colombia, in a magical house, in a vibrant town, in a wondrous, charmed place called an Encanto. The magic of the Encanto has blessed every child in the family with a unique gift from super strength to the power to heal—every child except one, Mirabel. But when she discovers that the magic surrounding the Encanto is in danger, Mirabel decides that she, the only ordinary Madrigal, might just be her exceptional family's last hope.",
+                7.8f,
+                "/4j0PNHkMr5ax3IA8tjtxcmPU3QT.jpg"
             ),
 
             DataEntity(
-                "movie13",
-                "T-34",
-                "01/01/2019",
-                "War, Action, Drama, History",
-                "2h 19m",
-                "In 1944, a courageous group of Russian soldiers managed to escape from German captivity in a half-destroyed legendary T-34 tank. Those were the times of unforgettable bravery, fierce fighting, unbreakable love, and legendary miracles.",
-                7.0f,
-                R.drawable.poster_t34
+                460458,
+                "Resident Evil: Welcome to Raccoon City",
+                "2021-11-24",
+                 listOf("Horror, Action, Science Fiction"),
+                107,
+                "Once the booming home of pharmaceutical giant Umbrella Corporation, Raccoon City is now a dying Midwestern town. The company’s exodus left the city a wasteland…with great evil brewing below the surface. When that evil is unleashed, the townspeople are forever…changed…and a small group of survivors must work together to uncover the truth behind Umbrella and make it through the night.",
+                6f,
+                "/6WR7wLCX0PGLhj51qyvK8MIxtT5.jpg"
             ),
 
             DataEntity(
-                "movie14",
-                "Mortal Engines",
-                "12/14/2018",
-                "Adventure, Science Fiction",
-                "2h 9m",
-                "Many thousands of years in the future, Earth’s cities roam the globe on huge wheels, devouring each other in a struggle for ever diminishing resources. On one of these massive traction cities, the old London, Tom Natsworthy has an unexpected encounter with a mysterious young woman from the wastelands who will change the course of his life forever.",
-                6.2f,
-                R.drawable.poster_mortal_engines
+                624860,
+                "The Matrix Resurrections",
+                "2021-12-16",
+                 listOf("Adventure, Action, Science Fiction"),
+                148,
+                "Plagued by strange memories, Neo's life takes an unexpected turn when he finds himself back inside the Matrix.",
+                7f,
+                "/gZlZLxJMfnSeS60abFZMh1IvODQ.jpg"
             ),
 
             DataEntity(
-                "movie15",
-                "Avengers: Infinity War",
-                "04/27/2018",
-                "Adventure, Action, Science Fiction",
-                "2h 29m",
-                "As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment - the fate of Earth and existence itself has never been more uncertain.",
-                8.3f,
-                R.drawable.poster_infinity_war
+                580489,
+                "Venom: Let There Be Carnage",
+                "2021-09-30",
+                 listOf("Science Fiction, Action, Adventure"),
+                97,
+                "After finding a host body in investigative reporter Eddie Brock, the alien symbiote must face a new enemy, Carnage, the alter ego of serial killer Cletus Kasady.",
+                7.2f,
+                "/rjkmN1dniUHVYAtwuV3Tji7FsDO.jpg"
+            ),
+
+            DataEntity(
+                512195,
+                "Red Notice",
+                "2021-11-04",
+                 listOf("Action, Comedy, Crime, Thriller"),
+                117,
+                "An Interpol-issued Red Notice is a global alert to hunt and capture the world's most wanted. But when a daring heist brings together the FBI's top profiler and two rival criminals, there's no telling what will happen.",
+                6.8f,
+                "/lAXONuqg41NwUMuzMiFvicDET9Y.jpg"
+            ),
+
+            DataEntity(
+                438695,
+                "Sing 2",
+                "2021-12-01",
+                 listOf("Animation, Comedy, Family, Music"),
+                110,
+                "Buster and his new cast now have their sights set on debuting a new show at the Crystal Tower Theater in glamorous Redshore City. But with no connections, he and his singers must sneak into the Crystal Entertainment offices, run by the ruthless wolf mogul Jimmy Crystal, where the gang pitches the ridiculous idea of casting the lion rock legend Clay Calloway in their show. Buster must embark on a quest to find the now-isolated Clay and persuade him to return to the stage.",
+                7.5f,
+                "/aWeKITRFbbwY8txG5uCj4rMCfSP.jpg"
+            ),
+
+            DataEntity(
+                425909,
+                "Ghostbusters: Afterlife",
+                "2021-11-11",
+                 listOf("Comedy, Fantasy, Adventure"),
+                124,
+                "When a single mom and her two kids arrive in a small town, they begin to discover their connection to the original Ghostbusters and the secret legacy their grandfather left behind.",
+                7.2f,
+                "/sg4xJaufDiQl7caFEskBtQXfD4x.jpg"
+            ),
+
+            DataEntity(
+                566525,
+                "Shang-Chi and the Legend of the Ten Rings",
+                "2021-09-01",
+                 listOf("Action, Adventure, Fantasy"),
+                132,
+                "Shang-Chi must confront the past he thought he left behind when he is drawn into the web of the mysterious Ten Rings organization.",
+                7.8f,
+                "/1BIoJGKbXjdFDAqUEiA2VHqkK1Z.jpg"
+            ),
+
+            DataEntity(
+                787310,
+                "Survive the Game",
+                "2021-10-08",
+                 listOf("Action, Thriller, Crime"),
+                97,
+                "An enchanting making-of story told through all-new in-depth interviews and cast conversations, inviting fans on a magical first-person journey through one of the most beloved film franchises of all time.",
+                5.9f,
+                "/xF1uc2pEf34X2G41wvZaF5H0V7C.jpg"
+            ),
+
+            DataEntity(
+                899082,
+                "Harry Potter 20th Anniversary: Return to Hogwarts",
+                "2022-01-01",
+                 listOf("Documentary"),
+                103,
+                "Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man.",
+                8.5f,
+                "/34Xss3gwKdwvtomCDkeC2lW4PVB.jpg"
+            ),
+
+            DataEntity(
+                826749,
+                "Fortress",
+                "2021-12-17",
+                 listOf("Crime, Action, Thriller"),
+                100,
+                "The story revolves around a top-secret resort for retired U.S. intelligence officers. A group of criminals led by Balzary breach the compound, hellbent on revenge on Robert, forcing the retired officer and his son to save the day.",
+                6.3f,
+                "/m76LAg0MchIcIW9i4yXsQPGQJJF.jpg"
+            ),
+
+            DataEntity(
+                818192,
+                "Ida Red",
+                "2021-11-05",
+                 listOf("Crime, Thriller, Drama, Action"),
+                111,
+                "Ida Red may not survive her 20-year prison sentence for armed robbery. She turns to her son, Wyatt, for one last job and a chance to regain her freedom.",
+                5.6f,
+                "/etMxKseW67499tUJonLNHXTF538.jpg"
+            ),
+
+            DataEntity(
+                524434,
+                "Eternals",
+                "2021-11-03",
+                 listOf("Action, Adventure, Fantasy, Science Fiction"),
+                157,
+                "The Eternals are a team of ancient aliens who have been living on Earth in secret for thousands of years. When an unexpected tragedy forces them out of the shadows, they are forced to reunite against mankind’s most ancient enemy, the Deviants.",
+                7.1f,
+                "/6AdXwFTRTAzggD2QUTt5B7JFGKL.jpg"
+            ),
+
+            DataEntity(
+                585245,
+                "Clifford the Big Red Dog",
+                "2021-11-10",
+                listOf("Animation, Comedy, Family"),
+                97,
+                "As Emily struggles to fit in at home and at school, she discovers a small red puppy who is destined to become her best friend. When Clifford magically undergoes one heck of a growth spurt, becomes a gigantic dog and attracts the attention of a genetics company, Emily and her Uncle Casey have to fight the forces of greed as they go on the run across New York City. Along the way, Clifford affects the lives of everyone around him and teaches Emily and her uncle the true meaning of acceptance and unconditional love.",
+                7.4f,
+                "/oifhfVhUcuDjE61V5bS5dfShQrm.jpg"
             ),
         )
     }
@@ -176,168 +176,168 @@ object DataDummy {
     fun getTvShow(): ArrayList<DataEntity> {
         return arrayListOf(
             DataEntity(
-                "tv1",
-                "Hanna",
-                "March 28, 2019",
-                "Action & Adventure, Drama",
-                "50m",
-                "This thriller and coming-of-age drama follows the journey of an extraordinary young girl as she evades the relentless pursuit of an off-book CIA agent and tries to unearth the truth behind who she is. Based on the 2011 Joe Wright film.",
-                7.6f,
-                R.drawable.poster_hanna
+                77169,
+                "Cobra Kai",
+                "2018-05-02",
+                 listOf("Action & Adventure, Drama"),
+                30,
+                "This Karate Kid sequel series picks up 30 years after the events of the 1984 All Valley Karate Tournament and finds Johnny Lawrence on the hunt for redemption by reopening the infamous Cobra Kai karate dojo. This reignites his old rivalry with the successful Daniel LaRusso, who has been working to maintain the balance in his life without mentor Mr. Miyagi.",
+                8.1f,
+                "/6POBWybSBDBKjSs1VAQcnQC1qyt.jpg"
             ),
 
             DataEntity(
-                "tv2",
-                "Gotham",
-                "September 22, 2014",
-                "Drama, Crime, Sci-Fi & Fantasy",
-                "43m",
-                "Everyone knows the name Commissioner Gordon. He is one of the crime world's greatest foes, a man whose reputation is synonymous with law and order. But what is known of Gordon's story and his rise from rookie detective to Police Commissioner? What did it take to navigate the multiple layers of corruption that secretly ruled Gotham City, the spawning ground of the world's most iconic villains? And what circumstances created them – the larger-than-life personas who would become Catwoman, The Penguin, The Riddler, Two-Face and The Joker?",
-                7.6f,
-                R.drawable.poster_gotham
+                115036,
+                "The Book of Boba Fett",
+                "2021-12-29",
+                 listOf("Sci-Fi & Fantasy, Action & Adventure"),
+                39,
+                "Legendary bounty hunter Boba Fett and mercenary Fennec Shand must navigate the galaxy’s underworld when they return to the sands of Tatooine to stake their claim on the territory once ruled by Jabba the Hutt and his crime syndicate.",
+                8.4f,
+                "/gNbdjDi1HamTCrfvM9JeA94bNi2.jpg"
             ),
 
             DataEntity(
-                "tv3",
-                "Arrow",
-                "October 10, 2012",
-                "Crime, Drama, Mystery, Action & Adventure",
-                "42m",
-                "Spoiled billionaire playboy Oliver Queen is missing and presumed dead when his yacht is lost at sea. He returns five years later a changed man, determined to clean up the city as a hooded vigilante armed with a bow.",
-                6.7f,
-                R.drawable.poster_arrow
+                71914,
+                "The Wheel of Time",
+                "2021-11-18",
+                 listOf("Sci-Fi & Fantasy, Drama"),
+                56,
+                "Follow Moiraine, a member of the shadowy and influential all-female organization called the “Aes Sedai” as she embarks on a dangerous, world-spanning journey with five young men and women. Moiraine believes one of them might be the reincarnation of an incredibly powerful individual, whom prophecies say will either save humanity or destroy it.",
+                8f,
+                "/mpgDeLhl8HbhI03XLB7iKO6M6JE.jpg"
             ),
 
             DataEntity(
-                "tv4",
-                "Marvel's Iron Fist",
-                "March 17, 2017",
-                "Action & Adventure, Drama, Sci-Fi & Fantasy",
-                "55m",
-                "Danny Rand resurfaces 15 years after being presumed dead. Now, with the power of the Iron Fist, he seeks to reclaim his past and fulfill his destiny.",
-                6.6f,
-                R.drawable.poster_iron_fist
+                88329,
+                "Hawkeye",
+                "2021-11-24",
+                 listOf("Action & Adventure, Drama"),
+                50,
+                "Former Avenger Clint Barton has a seemingly simple mission: get back to his family for Christmas. Possible? Maybe with the help of Kate Bishop, a 22-year-old archer with dreams of becoming a superhero. The two are forced to work together when a presence from Barton’s past threatens to derail far more than the festive spirit.",
+                8.4f,
+                "/pqzjCxPVc9TkVgGRWeAoMmyqkZV.jpg"
             ),
 
             DataEntity(
-                "tv5",
-                "Doom Patrol",
-                "February 15, 2019",
-                "Sci-Fi & Fantasy, Drama\n",
-                "49m",
-                "The Doom Patrol’s members each suffered horrible accidents that gave them superhuman abilities — but also left them scarred and disfigured. Traumatized and downtrodden, the team found purpose through The Chief, who brought them together to investigate the weirdest phenomena in existence — and to protect Earth from what they find.",
-                7.7f,
-                R.drawable.poster_doom_patrol
+                89614,
+                "Sword Snow Stride",
+                "2021-12-15",
+                 listOf("Drama"),
+                40,
+                "Xu Xiao has risen to become King of Northern Liang at a time of great upheaval in China. Steppe kingdoms have risen with deadly intent, and rebellious uprisings threaten to destabilise the realm in the south. Xu Xiao has managed to defeat them all. His unconventional, free-spirited son and heir Xu Feng Nian has spent years on the road, honing his horse skills and fighting prowess. Along the way, he meets the double sword-wielding martial arts expert Nan Gong Pu She, who becomes his confidante. Also joining the royal household is a woman named Jiang Ni. At age 12, she joined the court of the Northern Liang. She is the princess of a rival kingdom, and could be harbouring deep sentiments of revenge. When Xu Feng Nian has to take to the throne, some at court worry he will not be able to follow in the footsteps of his father. But things come to a head when the party has to travel to another province to fight a decisive campaign, the result of which could determine the future of the realm.",
+                5.9f,
+                "/avUmZDbbCcvnIFw0yrTM3A4CLlW.jpg"
             ),
 
             DataEntity(
-                "tv6",
-                "Super Dragon Ball Heroes",
-                "July 1, 2018",
-                "Animation, Action & Adventure, Sci-Fi & Fantasy",
-                "10m",
-                "Trunks returns from the future to train with Goku and Vegeta. However, it disappears without warning. Then the mysterious Fu bursts in, telling them that Trunks has been imprisoned in the Prison Planet, a mysterious complex in an unknown place in the universes. The group seeks the dragon balls to free Trunks, but an endless battle awaits them! Will Goku and the others rescue Trunks and escape the Prison Planet?",
-                7.5f,
-                R.drawable.poster_dragon_ball
+                90462,
+                "Chucky",
+                "2021-10-12",
+                 listOf("Crime"),
+                46,
+                "After a vintage Chucky doll turns up at a suburban yard sale, an idyllic American town is thrown into chaos as a series of horrifying murders begin to expose the town’s hypocrisies and secrets. Meanwhile, the arrival of enemies — and allies — from Chucky’s past threatens to expose the truth behind the killings, as well as the demon doll’s untold origins.",
+                7.9f,
+                "/iF8ai2QLNiHV4anwY1TuSGZXqfN.jpg"
             ),
 
             DataEntity(
-                "tv7",
+                1416,
                 "Grey's Anatomy",
-                "March 27, 2005",
-                "Drama",
-                "43m",
+                "2005-03-27",
+                 listOf("Drama"),
+                43,
                 "Follows the personal and professional lives of a group of doctors at Seattle’s Grey Sloan Memorial Hospital.",
                 8.2f,
-                R.drawable.poster_grey_anatomy
+                "/zPIug5giU8oug6Xes5K1sTfQJxY.jpg",
             ),
 
             DataEntity(
-                "tv8",
-                "Family Guy Presents: It's a Trap!",
-                "May 22, 2011",
-                "Animation, Fantasy, Comedy, Science Fiction, Adventure",
-                "57m",
-                "With the Griffins stuck again at home during a blackout, Peter tells the story of “Star Wars Episode VI: Return of the Jedi.”",
-                6.8f,
-                R.drawable.poster_family_guy
+                84553,
+                "Blade Runner: Black Lotus",
+                "2021-11-14",
+                 listOf("Animation, Sci-Fi & Fantasy, Action & Adventure"),
+                22,
+                "Los Angeles 2032. A young woman wakes up with no memories, and possessing deadly skills. The only clues to her mystery are a locked data device and a tattoo of a black lotus. Putting together the pieces, she must hunt down the people responsible for her brutal and bloody past to find the truth of her lost identity.",
+                7.5f,
+                "/zHQJkDZ4OjqJnp4vtphxOQ7GIh6.jpg"
             ),
 
             DataEntity(
-                "tv9",
-                "Shameless",
-                "January 9, 2011",
-                "Drama, Comedy\n",
-                "57m",
-                "Chicagoan Frank Gallagher is the proud single dad of six smart, industrious, independent kids, who without him would be... perhaps better off. When Frank's not at the bar spending what little money they have, he's passed out on the floor. But the kids have found ways to grow up in spite of him. They may not be like any family you know, but they make no apologies for being exactly who they are.",
-                8.0f,
-                R.drawable.poster_shameless
+                60735,
+                "The Flash",
+                "2014-10-07",
+                 listOf("Drama, Sci-Fi & Fantasy"),
+                44,
+                "After a particle accelerator causes a freak storm, CSI Investigator Barry Allen is struck by lightning and falls into a coma. Months later he awakens with the power of super speed, granting him the ability to move through Central City like an unseen guardian angel. Though initially excited by his newfound powers, Barry is shocked to discover he is not the only \"meta-human\" who was created in the wake of the accelerator explosion -- and not everyone is using their new powers for good. Barry partners with S.T.A.R. Labs and dedicates his life to protect the innocent. For now, only a few close friends and associates know that Barry is literally the fastest man alive, but it won't be long before the world learns what Barry Allen has become...The Flash.",
+                7.8f,
+                "/lJA2RCMfsWoskqlQhXPSLFQGXEJ.jpg"
             ),
 
             DataEntity(
-                "tv10",
-                "The Simpsons Movie",
-                "July 27, 2007",
-                "Animation, Comedy, Family",
-                "1h 27m",
-                "After Homer accidentally pollutes the town's water supply, Springfield is encased in a gigantic dome by the EPA and the Simpsons are declared fugitives.",
-                7.0f,
-                R.drawable.poster_the_simpson
+                63174,
+                "Lucifer",
+                "2016-01-25",
+                 listOf("Crime, Sci-Fi & Fantasy"),
+                62,
+                "Bored and unhappy as the Lord of Hell, Lucifer Morningstar abandoned his throne and retired to Los Angeles, where he has teamed up with LAPD detective Chloe Decker to take down criminals. But the longer he's away from the underworld, the greater the threat that the worst of humanity could escape.",
+                8.5f,
+                "/ekZobS8isE6mA53RAiGDG93hBxL.jpg"
             ),
 
             DataEntity(
-                "tv11",
-                "Supernatural",
-                "September 13, 2005",
-                "Drama, Mystery, Sci-Fi & Fantasy",
-                "45m",
-                "When they were boys, Sam and Dean Winchester lost their mother to a mysterious and demonic supernatural force. Subsequently, their father raised them to be soldiers. He taught them about the paranormal evil that lives in the dark corners and on the back roads of America ... and he taught them how to kill it. Now, the Winchester brothers crisscross the country in their '67 Chevy Impala, battling every kind of supernatural threat they encounter along the way.",
+                93405,
+                "Squid Game",
+                "2021-09-17",
+                 listOf("Action & Adventure, Mystery, Drama"),
+                54,
+                "Hundreds of cash-strapped players accept a strange invitation to compete in children's games—with high stakes. But, a tempting prize awaits the victor.",
+                7.8f,
+                "/dDlEmu3EZ0Pgg93K2SVNLCjCSvE.jpg"
+            ),
+
+            DataEntity(
+                71912,
+                "The Witcher",
+                "2019-12-20",
+                 listOf("Sci-Fi & Fantasy, Drama, Action & Adventure"),
+                60,
+                "Geralt of Rivia, a mutated monster-hunter for hire, journeys toward his destiny in a turbulent world where people often prove more wicked than beasts.",
                 8.2f,
-                R.drawable.poster_supernatural
+                "/7vjaCdMw15FEbXyLQTVa04URsPm.jpg"
             ),
 
             DataEntity(
-                "tv12",
-                "Supergirl",
-                "October 26, 2015",
-                "Drama, Sci-Fi & Fantasy, Action & Adventure",
-                "42m",
-                "Twenty-four-year-old Kara Zor-El, who was taken in by the Danvers family when she was 13 after being sent away from Krypton, must learn to embrace her powers after previously hiding them. The Danvers teach her to be careful with her powers, until she has to reveal them during an unexpected disaster, setting her on her journey of heroism.",
-                7.3f,
-                R.drawable.poster_supergirl
+                73586,
+                "Yellowstone",
+                "2018-06-20",
+                 listOf("Western, Drama"),
+                92,
+                "Follow the violent world of the Dutton family, who controls the largest contiguous ranch in the United States. Led by their patriarch John Dutton, the family defends their property against constant attack by land developers, an Indian reservation, and America’s first National Park.",
+                8f,
+                "/iqWCUwLcjkVgtpsDLs8xx8kscg6.jpg"
             ),
 
             DataEntity(
-                "tv13",
-                "The Umbrella",
-                "August 12, 2016",
-                "Drama",
-                "1h 33m",
-                "A man uses an imaginary umbrella to protect himself against against life; until he is convinced to use a real umbrella.",
-                0f,
-                R.drawable.poster_the_umbrella
+                85552,
+                "Euphoria",
+                "2019-06-16",
+                 listOf("Drama"),
+                60,
+                "A group of high school students navigate love and friendships in a world of drugs, sex, trauma, and social media.",
+                8.4f,
+                "/jtnfNzqZwN4E32FGGxx1YZaBWWf.jpg"
             ),
 
             DataEntity(
-                "tv14",
-                "The Walking Dead",
-                "October 31, 2010",
-                "Action & Adventure, Drama, Sci-Fi & Fantasy",
-                "42m",
-                "Sheriff's deputy Rick Grimes awakens from a coma to find a post-apocalyptic world dominated by flesh-eating zombies. He sets out to find his family and encounters many other survivors along the way.",
-                8.1f,
-                R.drawable.poster_the_walking_dead
-            ),
-
-            DataEntity(
-                "tv15",
-                "Riverdale",
-                "January 26, 2017",
-                "Mystery, Drama, Crime",
-                "45m",
-                "Set in the present, the series offers a bold, subversive take on Archie, Betty, Veronica and their friends, exploring the surreality of small-town life, the darkness and weirdness bubbling beneath Riverdale’s wholesome facade.",
+                60574,
+                "Peaky Blinders",
+                "2013-09-12",
+                 listOf("Crime, Drama"),
+                60,
+                "A gangster family epic set in 1919 Birmingham, England and centered on a gang who sew razor blades in the peaks of their caps, and their fierce boss Tommy Shelby, who means to move up in the world.",
                 8.6f,
-                R.drawable.poster_riverdale
+                "/bGZn5RVzMMXju4ev7xbl1aLdXqq.jpg"
             )
         )
     }

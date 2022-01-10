@@ -14,20 +14,20 @@ data class TvShowResponse(
 	val overview: String,
 
 	@field:SerializedName("genre_ids")
-	val genreIds: List<Int>,
+	val genres: List<String>,
 
 	@field:SerializedName("genres")
-	val genres: List<GenreResponse>,
+	val genresDetail: List<GenreResponse>,
 
 	@field:SerializedName("vote_average")
-	val rating: Double,
+	val rating: Float,
 
 	@field:SerializedName("name")
-	val name: String,
+	val title: String,
 
 	@field:SerializedName("episode_run_time")
-	val duration: List<Int>,
+	val duration: Int,
 
 	@field:SerializedName("poster_path")
-	val posterPath: String
+	val poster: String
 )

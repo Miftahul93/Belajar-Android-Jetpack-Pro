@@ -28,7 +28,7 @@ class RemoteDataSource {
         })
     }
 
-    fun getMovieDetail(movieId: Int, callback: LoadDetailMovieCallback){
+    fun getMovieDetail(movieId: LoadDetailMovieCallback, callback: LoadDetailMovieCallback){
         // idling
         val client = ApiClient.getApiService().getDetailMovie(movieId, MOVIE_API)
         client.enqueue(object : Callback<MovieResponse>{

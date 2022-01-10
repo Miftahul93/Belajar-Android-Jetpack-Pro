@@ -33,7 +33,7 @@ class DetailViewModelTest {
         assertEquals(dummyMovie.genre, movieEntity.genre)
         assertEquals(dummyMovie.duration, movieEntity.duration)
         assertEquals(dummyMovie.overview, movieEntity.overview)
-        assertEquals(dummyMovie.userScore, movieEntity.userScore)
+        assertEquals(dummyMovie.rating, movieEntity.rating)
         assertEquals(dummyMovie.poster, movieEntity.poster)
     }
 
@@ -48,7 +48,7 @@ class DetailViewModelTest {
         assertEquals(dummyTvShow.genre, tvEntity.genre)
         assertEquals(dummyTvShow.duration, dummyTvShow.duration)
         assertEquals(dummyTvShow.overview, tvEntity.overview)
-        assertEquals(dummyTvShow.userScore, tvEntity.userScore)
+        assertEquals(dummyTvShow.rating, tvEntity.rating)
         assertEquals(dummyTvShow.poster, tvEntity.poster)
     }
 }

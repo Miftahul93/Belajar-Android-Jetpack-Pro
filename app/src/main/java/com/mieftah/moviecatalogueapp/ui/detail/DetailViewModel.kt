@@ -2,9 +2,10 @@ package com.mieftah.moviecatalogueapp.ui.detail
 
 import androidx.lifecycle.ViewModel
 import com.mieftah.moviecatalogueapp.data.DataEntity
+import com.mieftah.moviecatalogueapp.data.source.CatalogueRepository
 import com.mieftah.moviecatalogueapp.utils.DataDummy
 
-class DetailViewModel : ViewModel() {
+class DetailViewModel(private val catalogueRepository: CatalogueRepository) : ViewModel() {
 
     private lateinit var movieShowId: String
     private lateinit var tvShowId: String

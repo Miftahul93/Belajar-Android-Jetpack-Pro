@@ -1,5 +1,6 @@
 package com.mieftah.moviecatalogueapp.api
 
+import com.mieftah.moviecatalogueapp.data.source.remote.RemoteDataSource
 import com.mieftah.moviecatalogueapp.data.source.remote.response.ListResponse
 import com.mieftah.moviecatalogueapp.data.source.remote.response.MovieResponse
 import com.mieftah.moviecatalogueapp.data.source.remote.response.TvShowResponse
@@ -21,7 +22,7 @@ interface ApiService {
     @GET(Constants.MOVIE_DETAIL)
     @Headers("Autorization: token ${Constants.MOVIE_API}")
     fun getDetailMovie(
-        @Path("movie_id") movieId: Int,
+        @Path("movie_id") movieId: RemoteDataSource.LoadDetailMovieCallback,
         @Query("api_key") apiKey: String
     ) : Call<MovieResponse>
 
