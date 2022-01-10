@@ -18,6 +18,7 @@ import kotlin.math.abs
 class DetailActivity : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener {
 
     private lateinit var binding: ActivityDetailBinding
+    private lateinit var viewModel: DetailViewModel
     private lateinit var data: DataEntity
     private val percentageToShowImage = 20
     private var mMaxScrollSize = 0
@@ -33,11 +34,10 @@ class DetailActivity : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener
         binding.toolbar.setNavigationOnClickListener { onBackPressed() }
         binding.appbar.addOnOffsetChangedListener(this)
 
-        val viewModel = ViewModelProvider(
-            this,
+        val viewModel = ViewModelProvider(this,
             ViewModelProvider.NewInstanceFactory()
         )[DetailViewModel::class.java]
-
+//
         val id = intent.getStringExtra(EXTRA_DATA)
         val type = intent.getStringExtra(EXTRA_TYPE)
 
@@ -58,7 +58,7 @@ class DetailActivity : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener
     private fun dataDetail() {
         binding.collapsing.title = data.title
         binding.tvTitle.text = data.title
-        binding.tvGenre.text = data.genre
+        binding.tvGenre.text = data.genres.toString()
         binding.tvRelease.text = data.releaseDate
         binding.tvDuration.text = data.duration
         binding.rating.text = data.rating.toString()
