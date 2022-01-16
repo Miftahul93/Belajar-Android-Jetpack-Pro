@@ -5,9 +5,9 @@
     <string name="poster">Poster</string>
     <string name="title">Title</string>
     <string name="genre">Genre</string>
-    <string name="duration">Duration</string>
+    <string name="duration">. %s</string>
     <string name="release">Release</string>
-    <string name="overview">Overview</string>
+    <string name="overview"><u>Overview</u></string>
     <string name="splashscreen">Splashscreen</string>
     <string name="created_by">Created By : Miftahul Ulum</string>
     <string name="button_favorite">Button Favorite</string>

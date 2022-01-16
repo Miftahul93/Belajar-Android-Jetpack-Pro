@@ -4,11 +4,12 @@ import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.mieftah.moviecatalogueapp.data.source.CatalogueRepository
-import com.mieftah.moviecatalogueapp.ui.Injection
+import com.mieftah.moviecatalogueapp.di.Injection
 import com.mieftah.moviecatalogueapp.ui.detail.DetailViewModel
 import com.mieftah.moviecatalogueapp.ui.home.DataMovieViewModel
 
-class ViewModelFactory private constructor(private val catalogueRepository: CatalogueRepository) : ViewModelProvider.NewInstanceFactory() {
+class ViewModelFactory private constructor(private val catalogueRepository: CatalogueRepository) :
+    ViewModelProvider.NewInstanceFactory() {
 
     @Suppress("UNCHECKED_CAST")
     override fun <T : ViewModel> create(modelClass: Class<T>): T {

@@ -3,16 +3,19 @@ package com.mieftah.moviecatalogueapp.ui.detail
 import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.palette.graphics.Palette
 import com.bumptech.glide.Glide
 import com.google.android.material.appbar.AppBarLayout
 import com.mieftah.moviecatalogueapp.R
-import com.mieftah.moviecatalogueapp.data.DataEntity
+import com.mieftah.moviecatalogueapp.data.source.local.DataEntity
 import com.mieftah.moviecatalogueapp.databinding.ActivityDetailBinding
-import com.mieftah.moviecatalogueapp.utils.Constants.TYPE_MOVIE
-import com.mieftah.moviecatalogueapp.utils.Constants.TYPE_TV_SHOW
+import com.mieftah.moviecatalogueapp.ui.home.MovieFragment
+import com.mieftah.moviecatalogueapp.ui.home.TvShowFragment
+import com.mieftah.moviecatalogueapp.utils.Constants
+import com.mieftah.moviecatalogueapp.viewmodel.ViewModelFactory
 import kotlin.math.abs
 
 class DetailActivity : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener {
@@ -34,38 +37,38 @@ class DetailActivity : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener
         binding.toolbar.setNavigationOnClickListener { onBackPressed() }
         binding.appbar.addOnOffsetChangedListener(this)
 
-        val viewModel = ViewModelProvider(this,
-            ViewModelProvider.NewInstanceFactory()
-        )[DetailViewModel::class.java]
-//
-        val id = intent.getStringExtra(EXTRA_DATA)
+        showLoading(true)
+        val factory = ViewModelFactory.getInstance(applicationContext)
+        viewModel = ViewModelProvider(this, factory)[DetailViewModel::class.java]
+
+        val id = intent.getIntExtra(EXTRA_DATA, 0)
         val type = intent.getStringExtra(EXTRA_TYPE)
 
-        if (type.equals(TYPE_MOVIE, ignoreCase = true)) {
-            id?.let {
-                viewModel.setMovieId(it)
-            }
-            data = viewModel.getDetailMovie()
-        } else if (type.equals(TYPE_TV_SHOW, ignoreCase = true)) {
-            id?.let {
-                viewModel.setTvShowId(it)
-            }
-            data = viewModel.getDetailTvShow()
+        if (type.equals(MovieFragment.TYPE_MOVIE, ignoreCase = true)) {
+            viewModel.getDetailMovie(id).observe(this, {
+                showLoading(false)
+                dataDetail(it)
+            })
+        } else if (type.equals(TvShowFragment.TYPE_TV_SHOW, ignoreCase = true)) {
+            viewModel.getDetailTvShow(id).observe(this, {
+                showLoading(false)
+                dataDetail(it)
+            })
         }
-        dataDetail()
+
     }
 
-    private fun dataDetail() {
+    private fun dataDetail(data: DataEntity) {
         binding.collapsing.title = data.title
         binding.tvTitle.text = data.title
-        binding.tvGenre.text = data.genres.toString()
-        binding.tvRelease.text = data.releaseDate
-        binding.tvDuration.text = data.duration
+        binding.tvGenre.text = data.genres?.joinToString(", ")
+        binding.tvRelease.text = data.releaseDate?.let { Constants.convertStringToDate(it) }
+        binding.tvDuration.text = data.duration?.let { Constants.convertMinuteToDuration(it) }
         binding.rating.text = data.rating.toString()
-        binding.ratingBar.rating = data.rating.div(2)
+        binding.ratingBar.rating = data.rating?.div(2)!!
         binding.tvOverview.text = data.overview
         Glide.with(this)
-            .load(data.poster)
+            .load(Constants.IMAGE_URL + data.poster)
             .into(binding.ivPoster)
 
         binding.ivPoster.tag = data.poster
@@ -78,8 +81,16 @@ class DetailActivity : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener
             Toast.makeText(this, "Share", Toast.LENGTH_SHORT).show()
         }
 
-        setColorByPalette(data.poster)
+        //setColorByPalette(data.poster)
 
+    }
+
+    private fun showLoading(state: Boolean) {
+        if (state) {
+            binding.progressBar.visibility = View.VISIBLE
+        } else {
+            binding.progressBar.visibility = View.GONE
+        }
     }
 
     private fun setColorByPalette(poster: Int) {

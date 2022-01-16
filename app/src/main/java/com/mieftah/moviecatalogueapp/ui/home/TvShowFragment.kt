@@ -8,47 +8,45 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mieftah.moviecatalogueapp.R
 import com.mieftah.moviecatalogueapp.adapter.DataAdapter
-import com.mieftah.moviecatalogueapp.data.DataEntity
+import com.mieftah.moviecatalogueapp.data.source.local.DataEntity
 import com.mieftah.moviecatalogueapp.databinding.FragmentMoviesBinding
 import com.mieftah.moviecatalogueapp.ui.detail.DetailActivity
-import com.mieftah.moviecatalogueapp.utils.Constants.TYPE_TV_SHOW
+import com.mieftah.moviecatalogueapp.viewmodel.ViewModelFactory
 
 class TvShowFragment : Fragment(R.layout.fragment_movies), DataAdapter.DataCallback {
 
     private var _binding: FragmentMoviesBinding? = null
     private val binding get() = _binding as FragmentMoviesBinding
-    private lateinit var viewmodel: DataMovieViewModel
+    private lateinit var viewModel: DataMovieViewModel
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         _binding = FragmentMoviesBinding.bind(view)
 
-        activity?.let {
-            viewmodel = ViewModelProvider(
-                it,
-                ViewModelProvider.NewInstanceFactory()
-            )[DataMovieViewModel::class.java]
-        }
+        if (activity != null) {
+            showLoading(true)
+            val factory = ViewModelFactory.getInstance(requireActivity())
+            viewModel = ViewModelProvider(this, factory)[DataMovieViewModel::class.java]
 
-        val listTvShow = viewmodel.getTvShow()
-        setListTvShow(listTvShow)
+            val tvShowAdapter = DataAdapter(this)
+            viewModel.getTvShow().observe(viewLifecycleOwner, { listTvShow ->
+                showLoading(false)
+                tvShowAdapter.setDataMovies(listTvShow)
+            })
+            with(binding.rvMovie) {
+                layoutManager = LinearLayoutManager(context)
+                setHasFixedSize(true)
+                adapter = tvShowAdapter
+            }
+        }
     }
 
-    private fun setListTvShow(data: List<DataEntity>) {
-        with(binding) {
-            rvMovie.apply {
-                layoutManager = LinearLayoutManager(context)
-                adapter = DataAdapter(this@TvShowFragment)
-            }.also {
-                it.adapter.let { adapter ->
-                    when (adapter) {
-                        is DataAdapter -> {
-                            adapter.setDataMovies(data)
-                        }
-                    }
-                }
-            }
+    private fun showLoading(state: Boolean) {
+        if (state) {
+            binding.progressBar.visibility = View.VISIBLE
+        } else {
+            binding.progressBar.visibility = View.GONE
         }
     }
 
@@ -60,4 +58,7 @@ class TvShowFragment : Fragment(R.layout.fragment_movies), DataAdapter.DataCallb
         )
     }
 
+    companion object {
+        const val TYPE_TV_SHOW = "type_tv_show"
+    }
 }

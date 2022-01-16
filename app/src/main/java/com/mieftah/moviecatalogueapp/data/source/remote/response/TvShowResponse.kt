@@ -26,7 +26,7 @@ data class TvShowResponse(
 	val title: String,
 
 	@field:SerializedName("episode_run_time")
-	val duration: Int,
+	val duration: List<Int?>? = null,
 
 	@field:SerializedName("poster_path")
 	val poster: String

@@ -10,4 +10,5 @@ data class GenreResponse(
 	@field:SerializedName("name")
 	val name: String
 
+
 )

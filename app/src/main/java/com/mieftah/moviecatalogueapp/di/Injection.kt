@@ -1,7 +1,6 @@
-package com.mieftah.moviecatalogueapp.ui
+package com.mieftah.moviecatalogueapp.di
 
 import android.content.Context
-import androidx.appcompat.widget.ThemedSpinnerAdapter
 import com.mieftah.moviecatalogueapp.data.source.CatalogueRepository
 import com.mieftah.moviecatalogueapp.data.source.remote.RemoteDataSource
 

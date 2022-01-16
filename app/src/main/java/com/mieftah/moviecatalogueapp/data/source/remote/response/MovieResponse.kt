@@ -29,5 +29,5 @@ data class MovieResponse(
 	val poster: String,
 
 	@field:SerializedName("runtime")
-	val duration: Int
+	val duration: Int?
 )

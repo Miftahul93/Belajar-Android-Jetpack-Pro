@@ -10,7 +10,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class CatalogueRepository private constructor(private val remoteDataSource: RemoteDataSource) :
+class FakeCatalogueRepository private constructor(private val remoteDataSource: RemoteDataSource) :
     CatalogueDataSource {
 
     override fun getMoviePopular(): LiveData<List<DataEntity>> {
@@ -142,15 +142,5 @@ class CatalogueRepository private constructor(private val remoteDataSource: Remo
                 })
         }
         return tvShowDetailResult
-    }
-
-    companion object {
-        @Volatile
-        private var instance: CatalogueRepository? = null
-
-        fun getInstance(remoteData: RemoteDataSource): CatalogueRepository =
-            instance ?: synchronized(this) {
-                instance ?: CatalogueRepository(remoteData)
-            }
     }
 }
