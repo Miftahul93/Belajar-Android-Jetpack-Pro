@@ -1,12 +1,11 @@
 package com.mieftah.moviecatalogueapp.adapter
 
-import android.graphics.BitmapFactory
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.palette.graphics.Palette
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import com.bumptech.glide.request.RequestOptions
 import com.mieftah.moviecatalogueapp.R
 import com.mieftah.moviecatalogueapp.data.source.local.DataEntity
 import com.mieftah.moviecatalogueapp.databinding.ItemMoviesBinding
@@ -48,20 +47,12 @@ class DataAdapter(private val callback: DataCallback) :
                 Glide.with(itemView.context)
                     .load(Constants.IMAGE_URL + data.poster)
                     .transform(RoundedCorners(30))
+                    .apply(RequestOptions.placeholderOf(R.drawable.ic_loading)
+                        .error(R.drawable.ic_error))
                     .into(ivPoster)
 
                 itemView.setOnClickListener {
                     callback.onItemClicked(data)
-
-                     /*val bitmap = BitmapFactory.decodeResource(itemView.context.resources, data.poster)
-
-                     Palette.from(bitmap).generate { palette ->
-                         val defValue =
-                             itemView.resources.getColor(R.color.dark, itemView.context.theme)
-                         cardItem.setCardBackgroundColor(
-                             palette?.getDarkMutedColor(defValue) ?: defValue
-                         )
-                     }*/
                 }
             }
         }

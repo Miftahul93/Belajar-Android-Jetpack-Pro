@@ -29,6 +29,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:scaleType="fitXY"
+                android:contentDescription="@string/poster"
                 tools:src="@drawable/poster_arrow"
                 tools:ignore="ContentDescription"/>
                 
@@ -36,6 +37,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/img_shadow"
+                android:contentDescription="@string/poster"
                 tools:ignore="ContentDescription" />
             
             <androidx.appcompat.widget.Toolbar

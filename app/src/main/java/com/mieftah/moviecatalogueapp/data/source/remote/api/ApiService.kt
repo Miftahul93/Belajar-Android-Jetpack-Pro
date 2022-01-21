@@ -13,35 +13,24 @@ import retrofit2.http.Query
 interface ApiService {
 
     @GET(Constants.MOVIE_POPULAR)
-   // @Headers("Authorization: token ${Constants.MOVIE_API}")
     fun getMoviePopular(
-        @Query("api_key") apiKey: String = Constants.MOVIE_API //= "aea0e885e4efcadd53839750a603350c"
-    ) : Call<ListResponse<MovieResponse>>
+        @Query("api_key") apiKey: String = Constants.MOVIE_API
+    ): Call<ListResponse<MovieResponse>>
 
     @GET(Constants.MOVIE_DETAIL)
-   // @Headers("Autorization: token ${Constants.MOVIE_API}")
     fun getDetailMovie(
         @Path("movie_id") movieId: Int,
-        @Query("api_key") apiKey: String = Constants.MOVIE_API //"aea0e885e4efcadd53839750a603350c"
-    ) : Call<MovieResponse>
+        @Query("api_key") apiKey: String = Constants.MOVIE_API
+    ): Call<MovieResponse>
 
     @GET(Constants.TV_POPULAR)
-    //@Headers("Autorization: token ${Constants.MOVIE_API}")
     fun getTvShowPopular(
-        @Query("api_key") apiKey: String = Constants.MOVIE_API //"aea0e885e4efcadd53839750a603350c"
-    ) : Call<ListResponse<TvShowResponse>>
+        @Query("api_key") apiKey: String = Constants.MOVIE_API
+    ): Call<ListResponse<TvShowResponse>>
 
     @GET(Constants.TV_DETAIL)
-    //@Headers("Autorization: token ${Constants.MOVIE_API}")
-    fun getDetailTvShow (
+    fun getDetailTvShow(
         @Path("tv_id") tvShowId: Int,
-        @Query("api_key") apiKey: String = Constants.MOVIE_API //"aea0e885e4efcadd53839750a603350c"
-    ) : Call<TvShowResponse>
-
-    @GET("genre/movie/list")
-    //@Headers("Autorization: token ${Constants.MOVIE_API}")
-    fun getGenreMovie (
-        @Path("tv_id")
-        @Query("api_key") apiKey: String = Constants.MOVIE_API //"aea0e885e4efcadd53839750a603350c"
-    ) : Call<GenreResponse>
+        @Query("api_key") apiKey: String = Constants.MOVIE_API
+    ): Call<TvShowResponse>
 }

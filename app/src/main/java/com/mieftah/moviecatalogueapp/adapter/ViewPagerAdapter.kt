@@ -13,11 +13,10 @@ class ViewPagerAdapter(activity: AppCompatActivity) : FragmentStateAdapter(activ
     }
 
     override fun createFragment(position: Int): Fragment {
-        var fragment: Fragment? = null
-        when (position) {
-            0 -> fragment = MovieFragment()
-            1 -> fragment = TvShowFragment()
+        return when (position) {
+            0 -> MovieFragment()
+            1 -> TvShowFragment()
+            else -> Fragment()
         }
-        return fragment as Fragment
     }
 }

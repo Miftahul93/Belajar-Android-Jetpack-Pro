@@ -33,11 +33,11 @@ object Constants {
         return ""
     }
 
-    fun convertMinuteToDuration(duration: Int) : String {
-        val hour = duration/60
-        val minute = duration%60
+    fun convertMinuteToDuration(duration: Int): String {
+        val hour = duration / 60
+        val minute = duration % 60
 
-        return if (hour>0) {
+        return if (hour > 0) {
             "$hour h $minute m"
         } else {
             "$minute m"

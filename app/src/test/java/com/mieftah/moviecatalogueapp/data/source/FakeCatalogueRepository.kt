@@ -10,14 +10,14 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class FakeCatalogueRepository private constructor(private val remoteDataSource: RemoteDataSource) :
+class FakeCatalogueRepository (private val remoteDataSource: RemoteDataSource) :
     CatalogueDataSource {
 
     override fun getMoviePopular(): LiveData<List<DataEntity>> {
         val movieResult = MutableLiveData<List<DataEntity>>()
 
         CoroutineScope(Dispatchers.IO).launch {
-            remoteDataSource.getMoviePopular(object : RemoteDataSource.LoadMoviesCallback {
+            remoteDataSource.getMoviePopular(object : RemoteDataSource.LoadMoviesPopularCallback {
                 override fun onMoviesLoaded(movies: List<MovieResponse>?) {
                     val movieList = ArrayList<DataEntity>()
                        if (movies != null) {

@@ -14,12 +14,15 @@ import retrofit2.Response
 
 class RemoteDataSource() {
 
-    fun getMoviePopular(callback: LoadMoviesCallback) {
+    fun getMoviePopular(popularCallback: LoadMoviesPopularCallback) {
         EspressoIdlingResource.increment()
         val client = ApiClient.getApiService().getMoviePopular()
         client.enqueue(object : Callback<ListResponse<MovieResponse>> {
-            override fun onResponse(call: Call<ListResponse<MovieResponse>>, response: Response<ListResponse<MovieResponse>>) {
-                callback.onMoviesLoaded(response.body()?.results)
+            override fun onResponse(
+                call: Call<ListResponse<MovieResponse>>,
+                response: Response<ListResponse<MovieResponse>>
+            ) {
+                popularCallback.onMoviesLoaded(response.body()?.results)
                 EspressoIdlingResource.decrement()
             }
 
@@ -30,10 +33,10 @@ class RemoteDataSource() {
         })
     }
 
-    fun getMovieDetail(movieId: Int, callback: LoadDetailMovieCallback){
+    fun getMovieDetail(movieId: Int, callback: LoadDetailMovieCallback) {
         EspressoIdlingResource.increment()
         val client = ApiClient.getApiService().getDetailMovie(movieId)
-        client.enqueue(object : Callback<MovieResponse>{
+        client.enqueue(object : Callback<MovieResponse> {
             override fun onResponse(call: Call<MovieResponse>, response: Response<MovieResponse>) {
                 callback.onMovieDetailLoaded(response.body())
                 EspressoIdlingResource.decrement()
@@ -46,11 +49,14 @@ class RemoteDataSource() {
         })
     }
 
-    fun getTvShowPopular (callback: LoadTvPopularCallback) {
+    fun getTvShowPopular(callback: LoadTvPopularCallback) {
         EspressoIdlingResource.increment()
         val client = ApiClient.getApiService().getTvShowPopular()
-        client.enqueue(object : Callback<ListResponse<TvShowResponse>>{
-            override fun onResponse(call: Call<ListResponse<TvShowResponse>>, response: Response<ListResponse<TvShowResponse>>) {
+        client.enqueue(object : Callback<ListResponse<TvShowResponse>> {
+            override fun onResponse(
+                call: Call<ListResponse<TvShowResponse>>,
+                response: Response<ListResponse<TvShowResponse>>
+            ) {
                 callback.onTvShowLoaded(response.body()?.results)
                 EspressoIdlingResource.decrement()
             }
@@ -65,10 +71,9 @@ class RemoteDataSource() {
     fun getTvShowDetail(tvShowId: Int, callback: LoadDetailTvShowCallback) {
         EspressoIdlingResource.increment()
         val client = ApiClient.getApiService().getDetailTvShow(tvShowId)
-        client.enqueue(object : Callback<TvShowResponse>{
+        client.enqueue(object : Callback<TvShowResponse> {
             override fun onResponse(
-                call: Call<TvShowResponse>,
-                response: Response<TvShowResponse>
+                call: Call<TvShowResponse>, response: Response<TvShowResponse>
             ) {
                 callback.onTvShowDetailLoaded(response.body())
                 EspressoIdlingResource.decrement()
@@ -82,7 +87,7 @@ class RemoteDataSource() {
     }
 
     interface LoadDetailTvShowCallback {
-        fun onTvShowDetailLoaded(tvShowDetail : TvShowResponse?)
+        fun onTvShowDetailLoaded(tvShowDetail: TvShowResponse?)
     }
 
     interface LoadTvPopularCallback {
@@ -93,7 +98,7 @@ class RemoteDataSource() {
         fun onMovieDetailLoaded(movieDetail: MovieResponse?)
     }
 
-    interface LoadMoviesCallback {
+    interface LoadMoviesPopularCallback {
         fun onMoviesLoaded(movies: List<MovieResponse>?)
     }
 
@@ -101,7 +106,7 @@ class RemoteDataSource() {
         @Volatile
         private var instance: RemoteDataSource? = null
 
-        fun getInstance() : RemoteDataSource = instance ?: synchronized(this) {
+        fun getInstance(): RemoteDataSource = instance ?: synchronized(this) {
             instance ?: RemoteDataSource()
         }
     }

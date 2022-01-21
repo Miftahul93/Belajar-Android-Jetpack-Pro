@@ -17,27 +17,27 @@ class CatalogueRepository private constructor(private val remoteDataSource: Remo
         val movieResult = MutableLiveData<List<DataEntity>>()
 
         CoroutineScope(Dispatchers.IO).launch {
-            remoteDataSource.getMoviePopular(object : RemoteDataSource.LoadMoviesCallback {
+            remoteDataSource.getMoviePopular(object : RemoteDataSource.LoadMoviesPopularCallback {
                 override fun onMoviesLoaded(movies: List<MovieResponse>?) {
                     val movieList = ArrayList<DataEntity>()
-                       if (movies != null) {
-                           for (response in movies) {
-                               with(response) {
-                                   val movie = DataEntity(
-                                       id,
-                                       title,
-                                       releaseDate,
-                                       genres,
-                                       duration,
-                                       overview,
-                                       rating,
-                                       poster
-                                   )
-                                   movieList.add(movie)
-                               }
-                           }
-                           movieResult.postValue(movieList)
-                       }
+                    if (movies != null) {
+                        for (response in movies) {
+                            with(response) {
+                                val movie = DataEntity(
+                                    id,
+                                    title,
+                                    releaseDate,
+                                    genres,
+                                    duration,
+                                    overview,
+                                    rating,
+                                    poster
+                                )
+                                movieList.add(movie)
+                            }
+                        }
+                        movieResult.postValue(movieList)
+                    }
                 }
             })
         }

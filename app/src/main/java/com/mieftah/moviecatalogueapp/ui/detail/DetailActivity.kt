@@ -1,5 +1,6 @@
 package com.mieftah.moviecatalogueapp.ui.detail
 
+import android.app.VoiceInteractor
 import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,6 +9,7 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.palette.graphics.Palette
 import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.google.android.material.appbar.AppBarLayout
 import com.mieftah.moviecatalogueapp.R
 import com.mieftah.moviecatalogueapp.data.source.local.DataEntity
@@ -22,7 +24,6 @@ class DetailActivity : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener
 
     private lateinit var binding: ActivityDetailBinding
     private lateinit var viewModel: DetailViewModel
-    private lateinit var data: DataEntity
     private val percentageToShowImage = 20
     private var mMaxScrollSize = 0
     private var mIsImageHidden = false
@@ -74,15 +75,12 @@ class DetailActivity : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener
         binding.ivPoster.tag = data.poster
 
         binding.fabFavorite.setOnClickListener {
-            Toast.makeText(this, "Favorite", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.favorite, Toast.LENGTH_SHORT).show()
         }
 
         binding.btShare.setOnClickListener {
-            Toast.makeText(this, "Share", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.share, Toast.LENGTH_SHORT).show()
         }
-
-        //setColorByPalette(data.poster)
-
     }
 
     private fun showLoading(state: Boolean) {
@@ -90,18 +88,6 @@ class DetailActivity : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener
             binding.progressBar.visibility = View.VISIBLE
         } else {
             binding.progressBar.visibility = View.GONE
-        }
-    }
-
-    private fun setColorByPalette(poster: Int) {
-        val bitmap = BitmapFactory.decodeResource(resources, poster)
-
-        Palette.from(bitmap).generate { palette ->
-            val defValue = resources.getColor(R.color.dark, theme)
-            binding.card1.setCardBackgroundColor(
-                palette?.getDarkMutedColor(defValue) ?: defValue
-            )
-            window.statusBarColor = palette?.getDarkMutedColor(defValue) ?: defValue
         }
     }
 

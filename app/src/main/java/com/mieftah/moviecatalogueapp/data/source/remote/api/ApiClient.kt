@@ -1,5 +1,6 @@
 package com.mieftah.moviecatalogueapp.data.source.remote.api
 
+import com.mieftah.moviecatalogueapp.BuildConfig
 import com.mieftah.moviecatalogueapp.utils.Constants
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -10,8 +11,11 @@ class ApiClient {
 
     companion object {
         fun getApiService(): ApiService {
-            val loggingInterceptor =
+            val loggingInterceptor = if (BuildConfig.DEBUG) {
                 HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
+            } else {
+                HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.NONE)
+            }
 
             val client = OkHttpClient.Builder()
                 .addInterceptor(loggingInterceptor)

@@ -9,13 +9,13 @@ import com.mieftah.moviecatalogueapp.R
 import com.mieftah.moviecatalogueapp.ui.home.MainActivity
 import com.mieftah.moviecatalogueapp.utils.Constants
 
-class SplashScreen : AppCompatActivity() {
+class SplashScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
 
         Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this@SplashScreen, MainActivity::class.java))
+            startActivity(Intent(this@SplashScreenActivity, MainActivity::class.java))
             finish()
         }, Constants.TIMES.toLong())
     }
